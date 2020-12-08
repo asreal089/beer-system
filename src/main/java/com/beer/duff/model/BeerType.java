@@ -16,50 +16,56 @@ public class BeerType {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codigo;
+	@Column(name="codigo")
+	private Long id;
 	
 	@NotNull
 	@Size(min= 3, max=50)
-	private String tipo;
+	@Column(name="tipo")
+	private String beerStyle;
 	
 	@NotNull
 	@Column(name="temperatura_max")
-	private int temperaturaMax;
+	private int maxTemperature;
 	
 	@NotNull
 	@Column(name="temperatura_min")
-	private int temperaturaMin;
+	private int minTemperature;
 	
-	public Long getCodigo() {
-		return codigo;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getBeerStyle() {
+		return beerStyle;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setBeerStyle(String beerStyle) {
+		this.beerStyle = beerStyle;
 	}
 
-	public int getTemperaturaMax() {
-		return temperaturaMax;
+	public int getMaxTemperature() {
+		return maxTemperature;
 	}
 
-	public void setTemperaturaMax(int temperaturaMax) {
-		this.temperaturaMax = temperaturaMax;
+	public void setMaxTemperature(int maxTemperature) {
+		this.maxTemperature = maxTemperature;
 	}
 
-	public int getTemperaturaMin() {
-		return temperaturaMin;
+	public int getMinTemperature() {
+		return minTemperature;
 	}
 
-	public void setTemperaturaMin(int temperaturaMin) {
-		this.temperaturaMin = temperaturaMin;
+	public void setMinTemperature(int minTemperature) {
+		this.minTemperature = minTemperature;
 	}
+
+	
+	
+	
 
 }

@@ -1,13 +1,13 @@
-package com.beer.duff;
+package com.duff.beer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BeearDuffApplication {
+public class BeerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BeearDuffApplication.class, args);
+		SpringApplication.run(BeerApplication.class, args);
 	}
 
 }

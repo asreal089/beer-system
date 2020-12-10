@@ -1,10 +1,10 @@
-package com.beer.duff;
+package com.duff.beer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BeerDuffApplicationTests {
+class BeerApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.beer.duff.model;
+package com.duff.beer.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +31,7 @@ public class BeerType {
 	@NotNull
 	@Column(name="temperatura_min")
 	private int minTemperature;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -63,9 +63,7 @@ public class BeerType {
 	public void setMinTemperature(int minTemperature) {
 		this.minTemperature = minTemperature;
 	}
-
 	
-	
-	
+		
 
 }

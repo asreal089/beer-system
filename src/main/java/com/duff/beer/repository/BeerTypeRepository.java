@@ -1,7 +1,8 @@
-package com.beer.duff.repository;
+package com.duff.beer.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.beer.duff.model.BeerType;
+
+import com.duff.beer.model.BeerType;
 
 
 public interface BeerTypeRepository extends JpaRepository<BeerType, Long> {

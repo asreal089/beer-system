@@ -69,6 +69,7 @@ public class BeerTypeController {
 	@GetMapping("/beerTemperature")
 	public ResponseEntity<?>  getBeerTypeByTemperature(@Valid @RequestBody BeerTemperature temperature){
 		System.out.println(temperature.getTemperature());
-		return ResponseEntity.noContent().build();
+		List<BeerType> beerTypeSaved = beerTypeService.getBeerByTemperature(temperature);
+		return ResponseEntity.ok(beerTypeSaved);
 	}
 }

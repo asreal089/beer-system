@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.duff.beer.model.BeerType;
 import com.duff.beer.repository.BeerTypeRepository;
+import com.duff.beer.repository.filter.BeerTemperature;
 import com.duff.beer.service.BeerTypeService;
 
 @RestController
@@ -63,5 +64,11 @@ public class BeerTypeController {
 	public ResponseEntity<?>  getBeerTypeById(@PathVariable Long id){
 		Optional<BeerType> beerTypeSaved = beerTypeService.getBeerTypeById(id);
 		return ResponseEntity.ok(beerTypeSaved);
+	}
+	
+	@GetMapping("/beerTemperature")
+	public ResponseEntity<?>  getBeerTypeByTemperature(@Valid @RequestBody BeerTemperature temperature){
+		System.out.println(temperature.getTemperature());
+		return ResponseEntity.noContent().build();
 	}
 }
